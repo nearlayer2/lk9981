@@ -1,0 +1,17 @@
+import random
+
+def generate_random_code():
+    num_list = [random.randint(1, 100) for _ in range(10)]
+    print("Original list:", num_list)
+    
+    even_nums = [num for num in num_list if num % 2 == 0]
+    odd_nums = [num for num in num_list if num % 2 != 0]
+    
+    if len(even_nums) > len(odd_nums):
+        print("There are more even numbers than odd numbers.")
+    elif len(even_nums) < len(odd_nums):
+        print("There are more odd numbers than even numbers.")
+    else:
+        print("The number of even numbers is equal to the number of odd numbers.")
+
+generate_random_code()
